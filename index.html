@@ -1,0 +1,17 @@
+<!DOCTYPE html><!--This is HTML-->
+<html><!---->
+    <head>
+        <title>Terminal</title>
+        <meta charset="utf-8" />
+        <link rel=stylesheet href="src/Terminal.css">
+        <script src="src/TerminalAPI.js"></script>
+        <script src="src/Commands.js"></script>
+        <script src="src/Interpretator.js"></script>
+    </head>
+    <body>
+        <div id=terminal>
+            <span id=termtext></span>
+            <input id=terminput type=text autofocus onkeydown=cmdexec(event)>
+        </div>
+    </body>
+</html>
