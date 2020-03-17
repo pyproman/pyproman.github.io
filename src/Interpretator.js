@@ -3,14 +3,14 @@ function cmdexec(event) {
         cmd = terminal.read()
             .replace(/^[ ]+/g, '');
         terminal.clearinput();
-        terminal.write(cmd + '\n');
+        terminal.write(` ${cmd}
+`);
         cmdname = cmd.split(' ')[0];
-        cmdargs = cmd.slice(cmdname.length);
-        if (cmd == ''){
-            // Nothing
-        } else if (window.commands[cmdname] === undefined) {
-            terminal.write(`Command "${cmdname}" not found\n`);
-        } else {
+        cmdargs = cmd.slice(cmdname.length+1);
+        if (window.commands[cmdname] === undefined) {
+            terminal.write(`Command "${cmdname}" not found
+`);
+        } else if (cmd != '') {
             window.commands[cmdname](cmdargs)
         }
         terminal.write(terminal.prompt);
@@ -21,7 +21,7 @@ function cmdexec(event) {
     }
 }
 function init() {
-    terminal.setplaceholder('type help');
+    terminal.setplaceholder('type help for list of commands');
     terminal.write(terminal.prompt);
 }
 window.onload = init;

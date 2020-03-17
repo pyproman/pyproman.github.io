@@ -1,17 +1,17 @@
-<!DOCTYPE html><!--This is HTML-->
-<html><!---->
-    <head>
-        <title>Terminal</title>
-        <meta charset="utf-8" />
-        <link rel=stylesheet href="src/Terminal.css">
-        <script src="src/TerminalAPI.js"></script>
-        <script src="src/Commands.js"></script>
-        <script src="src/Interpretator.js"></script>
-    </head>
-    <body>
-        <div id=terminal>
-            <span id=termtext></span>
-            <input id=terminput type=text autofocus onkeydown=cmdexec(event)>
-        </div>
-    </body>
-</html>
+<!DOCTYPE html> <!-- HTML5 init -->
+<html> <!-- The site -->
+    <head> <!-- Meta information -->
+        <title>Terminal</title> <!-- Title -->
+        <meta charset="utf-8" /> <!-- UTF-8 for entire page -->
+        <link rel=stylesheet href="src/Terminal.css"> <!-- CSS for the terminal -->
+        <script src="src/TerminalAPI.js"></script> <!-- Terminal API for easier writing to terminal -->
+        <script src="src/Commands.js"></script> <!-- Commands (prompt, project, echo, help) -->
+        <script src="src/Interpretator.js"></script> <!-- Interpretator, for running commands -->
+    </head> <!-- Meta information end -->
+    <body> <!-- Page -->
+        <div id=terminal> <!-- Terminal -->
+            <span id=termtext></span> <!-- Output of the terminal -->
+            <input id=terminput type=text autofocus onkeydown=cmdexec(event) spellcheck="false" autocomplete="off"> <!-- Terminal input -->
+        </div> <!-- End of terminal -->
+    </body> <!-- End of page -->
+</html> <!-- End of site-->

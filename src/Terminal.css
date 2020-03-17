@@ -3,6 +3,9 @@ body {
     color: white;
     font-family: monospace;
 }
+#termtext {
+    white-space: pre;
+}
 #terminput {
     background-color: black;
     color: white;
